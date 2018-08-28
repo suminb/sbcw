@@ -1,5 +1,4 @@
-def convert(text):
-    pass
+from homework1 import convert
 
 
 def test_problem1():

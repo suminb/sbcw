@@ -10,9 +10,9 @@
     britney@gmail.com
     christina@gmail.com
     dennis@gmail.com
-    emaily@gmail.com
+    emily@gmail.com
 
-편의상 다음과 같은 함수가 있다고 가정합시다. `text`가 주어졌을 때 세미콜론(`;`)으로 구분된 이메일 주소들을 반환하는 함수입니다. 이 함수가 반환한 문자열을 이메일 주소 칸에 그대로 붙여넣으면 단체 메일을 보낼 수 있습니다.
+여러분이 할 일은 `homework1.py`에 있는 `convert()` 함수를 구현하는 것입니다. `text`가 주어졌을 때 세미콜론(`;`)으로 구분된 이메일 주소들을 반환하는 함수입니다. 이 함수가 반환한 문자열을 이메일 주소 칸에 그대로 붙여넣으면 단체 메일을 보낼 수 있습니다.
 
     def convert(text):
         # 여기에 여러분의 코드를 작성하세요
