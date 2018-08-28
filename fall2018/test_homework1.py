@@ -1,6 +1,5 @@
 from homework1 import convert
 
-
 def test_problem1():
     text = 'alejandro, britney, christina, dennis, emily'
     expected = \
