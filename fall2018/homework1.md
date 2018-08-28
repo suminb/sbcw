@@ -6,11 +6,7 @@
 
 유저 이름 뒤에 `@gmail.com`을 붙여야 하는데, 이걸 수동으로 하기에 우리 인생은 너무 짧습니다. 이것을 다음과 같이 변환하는 코드를 작성하십시오.
 
-    alejandro@gmail.com
-    britney@gmail.com
-    christina@gmail.com
-    dennis@gmail.com
-    emily@gmail.com
+    alejandro@gmail.com; britney@gmail.com; christina@gmail.com; dennis@gmail.com; emily@gmail.com
 
 여러분이 할 일은 `homework1.py`에 있는 `convert()` 함수를 구현하는 것입니다. `text`가 주어졌을 때 세미콜론(`;`)으로 구분된 이메일 주소들을 반환하는 함수입니다. 이 함수가 반환한 문자열을 이메일 주소 칸에 그대로 붙여넣으면 단체 메일을 보낼 수 있습니다.
 
