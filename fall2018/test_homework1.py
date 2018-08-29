@@ -1,6 +1,10 @@
+import pytest
 from homework1 import convert
 from homework1_may import convert as may_convert
 
+xfail = pytest.mark.xfail
+
+@xfail
 def test_problem1():
     text = 'alejandro, britney, christina, dennis, emily'
     expected = \
