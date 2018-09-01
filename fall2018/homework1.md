@@ -132,3 +132,4 @@ prices = {
 ## 참고할만한 자료
 
 - https://www.datacamp.com/community/tutorials/data-structures-python
+- https://docs.python-guide.org/
