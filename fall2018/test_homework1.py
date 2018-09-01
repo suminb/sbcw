@@ -81,3 +81,18 @@ def test_problem3_2(i):
 ])
 def test_problem4(inventory, prices, nav):
     assert solution.net_asset_value(inventory, prices) == nav
+
+
+@pytest.mark.parametrize('index, inverted_index', [
+    ({}, {}),
+    (
+        {'a': 1, 'b': 2, 'c': 3},
+        {1: 'a', 2: 'b', 3: 'c'},
+    ),
+    (
+        {'transparency': 37, 'composibility': 5, 'immutability': 40, 'idempotency': 14},  # noqa
+        {37: 'transparency', 5: 'composibility', 40: 'immutability', 14: 'idempotency'},
+    )
+])
+def test_problem5(index, inverted_index):
+    assert solution.invert(index) == inverted_index
