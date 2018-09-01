@@ -48,6 +48,10 @@ def convert(text):
     pass
 ```
 
+## Problem 3
+
+3.1, 3.2는 `set`을 사용하지 않고 구현해봅시다.
+
 ## Problem 3.1
 
 ```python
