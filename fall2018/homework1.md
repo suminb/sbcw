@@ -82,6 +82,35 @@ def union(xs, ys):
 
     [1, 2, 3, 4, 5, 6]
 
+## Problem 4
+
+```python
+def net_asset_value(inventory, prices):
+    # 여기에 여러분의 코드를 작성하세요
+    pass
+```
+
+상품의 재고(`inventory`) 정보와 가격(`prices`) 정보가 주어졌을 때 총 재고 가치를 산출하는 함수를 작성하십시오.
+
+```python
+inventory = {
+    'avocado': 236,
+    'apple': 0,
+    'orange': 172,
+    'mango': 368,
+}
+
+prices = {
+    'avocado': 0.99,
+    'apple': 0.69,
+    'orange': 0.33,
+    'mango': 0.79
+}
+```
+
+위와 같은 경우 총 재고 가치는 `581.12` 입니다. 코드를 너무 복잡하게 만드는 것을 방지하기 위해서 `prices`는 항상 `inventory`에 있는 모든 아이템에 대한 가격 정보를 담고 있다고 가정해도 좋습니다.
+
+
 ## 제출
 
 답안은 `solution1_(GitHub 아이디).py` 파일로 제출해주십시오. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `solution1_suminb.py`가 되어야 합니다.

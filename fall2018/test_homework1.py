@@ -54,3 +54,30 @@ def test_problem3_2(i):
     xs = random.sample(range(100), random.randint(*list_length))
     ys = random.sample(range(100), random.randint(*list_length))
     assert set(solution.union(xs, ys)) == set(xs).union(ys)
+
+
+@pytest.mark.parametrize('inventory, prices, nav', [
+    ({}, {}, 0),
+    (
+        {'banana': 1000},
+        {'banana': 0.90},
+        900
+    ),
+    (
+        {
+            'avocado': 236,
+            'apple': 0,
+            'orange': 172,
+            'mango': 368,
+        },
+        {
+            'avocado': 0.99,
+            'apple': 0.69,
+            'orange': 0.33,
+            'mango': 0.79
+        },
+        581.12
+    )
+])
+def test_problem4(inventory, prices, nav):
+    assert solution.net_asset_value(inventory, prices) == nav
