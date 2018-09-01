@@ -46,7 +46,7 @@ def test_problem2():
 def test_problem3_1(i):
     xs = random.sample(range(100), random.randint(*list_length))
     ys = random.sample(range(100), random.randint(*list_length))
-    assert set(solution.intersect(xs, ys)) == set(xs).intersection(ys)
+    assert set(solution.intersection(xs, ys)) == set(xs).intersection(ys)
 
 
 @pytest.mark.parametrize('i', range(10))

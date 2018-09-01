@@ -55,7 +55,7 @@ def convert(text):
 ## Problem 3.1
 
 ```python
-def intersect(xs, ys):
+def intersection(xs, ys):
     # 여기에 여러분의 코드를 작성하세요
     pass
 ```
