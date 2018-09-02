@@ -453,6 +453,9 @@ def generator():
     >>> [x for x in generator()]
     [1, 2, 3]
 
+    >>> list(generator())
+    [1, 3, 3]
+
 ```python
 def infinite_list():
     v = 0
@@ -481,6 +484,16 @@ Iterator 가 소진되면 더이상 사용할 수 없습니다.
 
 Q. Why would you want to use generators?
 
+## Functions
+
+Positional arguments, keyword arguments, arbitrary argument list, arbitrary keyword argument dictionary
+
 ## Taste of Real World
 
 (판사님, 이 코드는 고양이가 만들었습니다.)
+
+## 만약 시간이 허락한다면
+
+- Coroutine: https://docs.python.org/3/library/asyncio-task.html
+- Integer division vs. floating point division
+- break, continue
