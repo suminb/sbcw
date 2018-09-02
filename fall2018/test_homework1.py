@@ -46,7 +46,7 @@ def test_problem2():
 def test_problem3_1(i):
     xs = random.sample(range(100), random.randint(*list_length))
     ys = random.sample(range(100), random.randint(*list_length))
-    assert set(solution.intersect(xs, ys)) == set(xs).intersection(ys)
+    assert set(solution.intersection(xs, ys)) == set(xs).intersection(ys)
 
 
 @pytest.mark.parametrize('i', range(10))
@@ -64,20 +64,25 @@ def test_problem3_2(i):
         900
     ),
     (
-        {
-            'avocado': 236,
-            'apple': 0,
-            'orange': 172,
-            'mango': 368,
-        },
-        {
-            'avocado': 0.99,
-            'apple': 0.69,
-            'orange': 0.33,
-            'mango': 0.79
-        },
+        {'avocado': 236, 'apple': 0, 'orange': 172, 'mango': 368},
+        {'avocado': 0.99, 'apple': 0.69, 'orange': 0.33, 'mango': 0.79},
         581.12
     )
 ])
 def test_problem4(inventory, prices, nav):
     assert solution.net_asset_value(inventory, prices) == nav
+
+
+@pytest.mark.parametrize('index, inverted_index', [
+    ({}, {}),
+    (
+        {'a': 1, 'b': 2, 'c': 3},
+        {1: 'a', 2: 'b', 3: 'c'},
+    ),
+    (
+        {'transparency': 37, 'composibility': 5, 'immutability': 40, 'idempotency': 14},  # noqa
+        {37: 'transparency', 5: 'composibility', 40: 'immutability', 14: 'idempotency'},  # noqa
+    )
+])
+def test_problem5(index, inverted_index):
+    assert solution.invert(index) == inverted_index

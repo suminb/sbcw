@@ -55,7 +55,7 @@ def convert(text):
 ## Problem 3.1
 
 ```python
-def intersect(xs, ys):
+def intersection(xs, ys):
     # 여기에 여러분의 코드를 작성하세요
     pass
 ```
@@ -114,6 +114,32 @@ prices = {
 
 위와 같은 경우 총 재고 가치는 `581.12` 입니다. 코드를 너무 복잡하게 만드는 것을 방지하기 위해서 `prices`는 항상 `inventory`에 있는 모든 아이템에 대한 가격 정보를 담고 있다고 가정해도 좋습니다.
 
+## Problem 5
+
+```python
+def invert(index):
+    # 여기에 여러분의 코드를 작성하세요
+    pass
+```
+
+딕셔너리의 키와 값을 바꾸는 코드를 작성하십시오.
+
+```python
+index = {
+    'transparency': 37,
+    'composibility': 5,
+    'immutability': 40,
+    'idempotency': 14
+}
+```
+
+기대되는 `invert()` 함수의 출력값은 다음과 같습니다.
+
+```python
+{37: 'transparency', 5: 'composibility', 40: 'immutability', 14: 'idempotency'}
+```
+
+코드를 복잡하게 만드는 것을 방지하기 위해 원본 딕셔너리의 키-값은 1:1 관계라고 가정합니다. (i.e., 같은 값을 가지는 중복되는 키가 없습니다.)
 
 ## 제출
 
@@ -132,3 +158,4 @@ prices = {
 ## 참고할만한 자료
 
 - https://www.datacamp.com/community/tutorials/data-structures-python
+- https://docs.python-guide.org/
