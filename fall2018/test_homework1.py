@@ -21,16 +21,24 @@ def setup_module():
     solution = __import__(module_name)
 
 
-@pytest.mark.parametrize('i', range(10))
-def test_problem1_1(i):
-    xs = random.sample(range(100), random.randint(*list_length))
-    # NOTE: We decided to call `sqrt()` so that we don't leak the solution for this problem
+@pytest.fixture
+def random_list():
+    def make(min_len, max_len):
+        return random.sample(range(100), random.randint(min_len, max_len))
+    return make
+
+
+@pytest.mark.parametrize('_', range(10))
+def test_problem1_1(_, random_list):
+    xs = random_list(*list_length)
+    # NOTE: We decided to call `sqrt()` so that we don't leak the solution for
+    # this problem
     assert all([float(x) == math.sqrt(y) for x, y in zip(xs, solution.square(xs))])
 
 
-@pytest.mark.parametrize('i', range(10))
-def test_problem1_2(i):
-    xs = random.sample(range(100), random.randint(*list_length))
+@pytest.mark.parametrize('_', range(10))
+def test_problem1_2(_, random_list):
+    xs = random_list(*list_length)
     assert all([x % 2 == 0 for x in solution.even(xs)])
 
 
@@ -42,17 +50,17 @@ def test_problem2():
     assert solution.convert(text) == expected
 
 
-@pytest.mark.parametrize('i', range(10))
-def test_problem3_1(i):
-    xs = random.sample(range(100), random.randint(*list_length))
-    ys = random.sample(range(100), random.randint(*list_length))
+@pytest.mark.parametrize('_', range(10))
+def test_problem3_1(_, random_list):
+    xs = random_list(*list_length)
+    ys = random_list(*list_length)
     assert set(solution.intersection(xs, ys)) == set(xs).intersection(ys)
 
 
-@pytest.mark.parametrize('i', range(10))
-def test_problem3_2(i):
-    xs = random.sample(range(100), random.randint(*list_length))
-    ys = random.sample(range(100), random.randint(*list_length))
+@pytest.mark.parametrize('_', range(10))
+def test_problem3_2(_, random_list):
+    xs = random_list(*list_length)
+    ys = random_list(*list_length)
     assert set(solution.union(xs, ys)) == set(xs).union(ys)
 
 
@@ -89,14 +97,14 @@ def test_problem5(index, inverted_index):
 
 
 @pytest.mark.parametrize('_', range(10))
-def test_problem6_1(_):
+def test_problem6_1(_, random_list):
     m = random.randint(1, 10)  # Number of lists
-    lists = [random.sample(range(100), random.randint(0, 25)) for _ in range(m)]
+    lists = [random_list(0, 25) for _ in range(m)]
     assert list(zip(*lists)) == list(solution.zip(*lists))
 
 
 @pytest.mark.parametrize('_', range(10))
-def test_problem6_2(_):
+def test_problem6_2(_, random_list):
     m = random.randint(1, 10)  # Number of lists
-    lists = [random.sample(range(100), random.randint(0, 25)) for _ in range(m)]
+    lists = [random_list(0, 25) for _ in range(m)]
     assert list(zip(*lists)) == list(solution.unzip(lists))
