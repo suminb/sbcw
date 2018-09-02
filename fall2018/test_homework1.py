@@ -86,3 +86,17 @@ def test_problem4(inventory, prices, nav):
 ])
 def test_problem5(index, inverted_index):
     assert solution.invert(index) == inverted_index
+
+
+@pytest.mark.parametrize('_', range(10))
+def test_problem6_1(_):
+    m = random.randint(1, 10)  # Number of lists
+    lists = [random.sample(range(100), random.randint(0, 25)) for _ in range(m)]
+    assert list(zip(*lists)) == list(solution.zip(*lists))
+
+
+@pytest.mark.parametrize('_', range(10))
+def test_problem6_2(_):
+    m = random.randint(1, 10)  # Number of lists
+    lists = [random.sample(range(100), random.randint(0, 25)) for _ in range(m)]
+    assert list(zip(*lists)) == list(solution.unzip(lists))
