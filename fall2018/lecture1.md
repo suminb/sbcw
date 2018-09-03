@@ -269,6 +269,11 @@ Stepping:
     >>> xs[0:5:2]
     [1, 3, 5]
 
+List concat:
+
+    >>> [1, 2, 3] + [4, 5]
+    [1, 2, 3, 4, 5]
+
 Q: Explain how this works:
 
     >>> xs[::-1]
@@ -486,7 +491,10 @@ Q. Why would you want to use generators?
 
 ## Functions
 
-Positional arguments, keyword arguments, arbitrary argument list, arbitrary keyword argument dictionary
+- Positional arguments
+- Keyword arguments
+- Arbitrary argument list
+- Arbitrary keyword argument dictionary
 
 ## Taste of Real World
 
