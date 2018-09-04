@@ -1,6 +1,4 @@
-## Problem 1
-
-이 문제는 여러개의 하위 문제로 구성된 문제입니다. 코드를 길게 작성해서 풀어도 상관 없지만, 파이썬의 [list comprehension](https://www.programiz.com/python-programming/list-comprehension)을 이용하면 단 한줄로 해결할 수 있는 문제들입니다.
+코드를 길게 작성해서 풀어도 상관 없지만, 파이썬의 [list comprehension](https://www.programiz.com/python-programming/list-comprehension)을 이용하면 단 한줄로 해결할 수 있는 문제들입니다.
 
 ## Problem 1.1
 
