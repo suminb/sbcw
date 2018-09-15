@@ -11,14 +11,15 @@ solution = None
 list_length = (5, 25)
 
 
-def setup_module():
-    solution_files = [fn for fn in os.listdir() if re.match(r'solution1_\w+\.py', fn)]
-    assert len(solution_files) > 0, 'Could not find any solution'
-
-    module_name = solution_files[0][:-3]
+def setup_module(module):
+    username = pytest.config.getoption('username')
+    solution_module = f'solution1_{username}'
 
     global solution
-    solution = __import__(module_name)
+    try:
+        solution = __import__(solution_module)
+    except ImportError:
+        pytest.exit(f'{solution_module}.py does not exist')
 
 
 @pytest.fixture

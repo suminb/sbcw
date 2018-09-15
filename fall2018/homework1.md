@@ -182,7 +182,7 @@ def unzip(iterables):
 
 패키지가 설치되면 다음과 같이 테스트 파일을 실행해서 여러분이 작성한 코드가 제대로 작동되는지 검증하도록 합니다.
 
-    pytest -v test_homework1.py
+    pytest -v test_homework1.py --username (GitHub 아이디)
 
 ## 참고할만한 자료
 
