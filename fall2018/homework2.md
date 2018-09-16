@@ -117,3 +117,5 @@ Traceback (most recent call last):
     raise ValueError('Dictionary is not injective, hence cannot be inverted')
 ValueError: Dictionary is not injective, hence cannot be inverted
 ```
+
+`invert()`가 반환하는 객체는 `dict` 타입이 아닌 `DictWrapper` 타입이어야 한다.
