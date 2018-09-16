@@ -16,7 +16,7 @@ Easier to ask for forgiveness (EAFP). 허락을 구하기보단 용서를 구하
 if len(xs) > i:
     print(xs[i])
 else:
-    print('i is out of bound', file=sys.stderr))
+    print('i is out of bound', file=sys.stderr)
 ```
 
 ### 용서를 구하는 코드 1
@@ -25,7 +25,7 @@ else:
 try:
     print(xs[i])
 except IndexError:
-    print('i is out of bound', file=sys.stderr))
+    print('i is out of bound', file=sys.stderr)
 ```
 
 ### 허락을 구하는 코드 2
