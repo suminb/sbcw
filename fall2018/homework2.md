@@ -3,6 +3,21 @@
 자바스크립트의 경우 `dict[key]` 또는 `dict.key` 를 구분하지 않고 사용할 수 있다. 반면, 파이썬에서는 이 둘의 용법이 명확하게 구분된다.
 
 ```
+>>> d = {'key': 'value'}
+
+>>> d['key']
+'value'
+
+>>> d.key
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'key'
+```
+
+
+## Problem 1.1
+
+```
 >>> d = DictWrapper({'key': 'value'})
 
 >>> d['key']
@@ -11,8 +26,6 @@ value
 >>> d.key
 value
 ```
-
-## Problem 1.1
 
 위와 같이 이 둘을 명확하게 구분하지 않고 사용할 수 있도록 만들어주는 `DictWrapper` 클래스를 구현하여라.
 
