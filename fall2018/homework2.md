@@ -103,7 +103,6 @@ class DictWrapper(object):
 ```
 >>> d = DictWrapper({'a': 1, 'b': 2, 'c': 3})
 >>> d.invert()
->>> d
 {1: 'a', 2: 'b', 3: 'c'}
 ```
 
