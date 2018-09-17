@@ -109,7 +109,7 @@ class DictWrapper(object):
 만약 1:1 관계가 성립하지 않는다면 `ValueError`를 내야 한다.
 
 ```
->>> d = DictWrapper({'a': 1, 'b': 2, 'c': 3})
+>>> d = DictWrapper({'a': 1, 'b': 2, 'c': 2})
 >>> d.invert()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
