@@ -119,3 +119,25 @@ ValueError: Dictionary is not injective, hence cannot be inverted
 ```
 
 `invert()`가 반환하는 객체는 `dict` 타입이 아닌 `DictWrapper` 타입이어야 한다.
+
+## Problem 2
+
+(TODO: Reversed iterator)
+
+## Problem 3
+
+(TODO: Singleton)
+
+## 제출
+
+답안은 `solution2_(GitHub 아이디).py` 파일로 제출하면 된다. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `solution2_suminb.py`가 되어야 한다.
+
+## 자동 채점
+
+코드를 테스트 하기 위해서는 `pytest` 패키지가 필요하다. 다음의 명령어를 실행하여 설치하도록 한다.
+
+    pip install pytest
+
+패키지가 설치되면 다음과 같이 테스트 파일을 실행해서 여러분이 작성한 코드가 제대로 작동되는지 검증하도록 한다.
+
+    pytest -v test_homework2.py --username (GitHub 아이디)
