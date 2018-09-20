@@ -130,7 +130,7 @@ ValueError: Dictionary is not injective, hence cannot be inverted
 
 ## 제출
 
-답안은 `solution2_(GitHub 아이디).py` 파일로 제출하면 된다. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `solution2_suminb.py`가 되어야 한다.
+답안은 `solutions/homework2_(GitHub 아이디).py` 파일로 제출하면 된다. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `homework2_suminb.py`가 되어야 하고, 해당 파일을 `solutions` 디렉토리 안에 위치시키면 된다.
 
 ## 자동 채점
 

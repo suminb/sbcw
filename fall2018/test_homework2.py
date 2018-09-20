@@ -36,13 +36,15 @@ def random_dict():
 
 def setup_module(module):
     username = pytest.config.getoption('username')
-    solution_module = f'solution2_{username}'
+    solution_module = f'homework2_{username}'
 
-    global solution
     try:
-        solution = __import__(solution_module)
+        namespace = __import__(f'solutions.{solution_module}')
     except ImportError:
         pytest.exit(f'{solution_module}.py does not exist')
+    else:
+        global solution
+        solution = getattr(namespace, solution_module)
 
 
 @pytest.mark.parametrize('_', range(8))
