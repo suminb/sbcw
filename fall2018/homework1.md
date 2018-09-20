@@ -172,7 +172,7 @@ def unzip(iterables):
 
 ## 제출
 
-답안은 `solution1_(GitHub 아이디).py` 파일로 제출해주십시오. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `solution1_suminb.py`가 되어야 합니다.
+답안은 `solutions/homework1_(GitHub 아이디).py` 파일로 제출해주십시오. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `homework1_suminb.py`가 되어야 하고, `solutions` 디렉토리 안에 위치시키면 됩니다.
 
 ## 자동 채점
 
