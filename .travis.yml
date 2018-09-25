@@ -1,0 +1,18 @@
+language: python
+sudo: false
+
+python:
+  - "3.6"
+
+install:
+  - pip install -r fall2018/requirements.txt
+
+script:
+  - export PYTHONPATH=$PYTHONPATH:.
+  - >
+    for n in 1 2; do
+      for username in $(ls fall2018/solutions/homework$n_*.py|awk -F'[_.]' '{print $2}'); do
+        echo "Testing homework $n for $username..."
+        pytest fall2018/test_homework$n.py -v --username=$username --durations=10
+      done
+    done
