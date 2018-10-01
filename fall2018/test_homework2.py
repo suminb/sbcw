@@ -99,3 +99,36 @@ def test_dict_wrapper_4(original, inverted, injective):
         with pytest.raises(ValueError):
             d = solution.DictWrapper(original)
             d.invert()
+
+
+@pytest.mark.parametrize('start, end', [
+    (0, 0),
+    (1, 2),
+    (-10, 5),
+    (-20, 0),
+    (-30, -10),
+])
+def test_range_1(start, end):
+    assert list(solution.Range(start, end)) == list(range(start, end))
+
+
+@pytest.mark.parametrize('start, end, step', [
+    (0, 0, 1),
+    (1, 2, 1),
+    (3, 20, 1),
+    (-10, 10, 3),
+    (-10, 20, 100),
+])
+def test_range_2(start, end, step):
+    assert list(solution.Range(start, end, step)) == list(range(start, end, step))
+
+
+@pytest.mark.parametrize('start, end, step', [
+    (0, 0, 1),
+    (1, 2, 1),
+    (3, 20, 1),
+    (-10, 10, 3),
+    (-10, 20, 100),
+])
+def test_range_2(start, end, step):
+    assert list(reversed(solution.Range(start, end, step))) == list(reversed(range(start, end, step)))

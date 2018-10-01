@@ -113,20 +113,63 @@ class DictWrapper(object):
 >>> d.invert()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File ".../solution2_suminb.py", line 16, in invert
+  File ".../homework2_suminb.py", line 16, in invert
     raise ValueError('Dictionary is not injective, hence cannot be inverted')
 ValueError: Dictionary is not injective, hence cannot be inverted
 ```
 
 `invert()`가 반환하는 객체는 `dict` 타입이 아닌 `DictWrapper` 타입이어야 한다.
 
-## Problem 2
+## Problem 2.1
 
-(TODO: Reversed iterator)
+파이썬의 `range()` 함수는 다음과 같이 유용하게 사용할 수 있다.
 
-## Problem 3
+```
+>>> [x for x in range(0, 10, 2)]
+[0, 2, 4, 6, 8]
+```
 
-(TODO: Singleton)
+이것과 비슷한 기능을 제공하는 `Range` 클래스를 작성하여라. 단, `range()` 를 사용하지 않고 구현해야 한다. 또한, 복잡도를 줄이기 위해 `range(10)` 처럼 하나의 인자만 전달하는 것은 지원하지 않는다.
+
+다음과 같이 시작과 끝을 명시하거나,
+
+```
+>>> [x for x in Range(0, 5)]
+[0, 1, 2, 3, 4]
+```
+
+다음과 같이 시작과 끝, 그리고 스텝 크기를 명시할 수 있어야 한다.
+
+```
+>>> [x for x in Range(0, 10, 3)]
+[0, 3, 6, 9]
+```
+
+```
+>>> [x for x in reversed(range(0, 5, 0))]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: range() arg 3 must not be zero
+```
+
+다음의 파이썬 함수들이 도움이 될 수 있다.
+
+- [`__iter__()`](https://docs.python.org/3/reference/datamodel.html#object.__iter__)
+- [`__next__()`](https://docs.python.org/3/library/stdtypes.html#iterator.__next__)
+
+## Problem 2.2
+
+다음의 동작을 지원하도록 `Range` 클래스를 확장하여라.
+
+```
+>>> [x for x in reversed(Range(0, 5))]
+[4, 3, 2, 1, 0]
+```
+
+```
+>>> [x for x in reversed(Range(0, 10, 2))]
+[8, 6, 4, 2, 0]
+```
 
 ## 제출
 
