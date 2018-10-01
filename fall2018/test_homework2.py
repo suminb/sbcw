@@ -130,5 +130,10 @@ def test_range_2(start, end, step):
     (-10, 10, 3),
     (-10, 20, 100),
 ])
-def test_range_2(start, end, step):
+def test_range_3(start, end, step):
     assert list(reversed(solution.Range(start, end, step))) == list(reversed(range(start, end, step)))
+
+
+def test_ragne_4():
+    with pytest.raises(ValueError):
+        _ = solution.Range(0, 0, 0)

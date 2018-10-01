@@ -145,11 +145,15 @@ ValueError: Dictionary is not injective, hence cannot be inverted
 [0, 3, 6, 9]
 ```
 
+세번째 인자인 `step`의 값은 `0`이 아닌 값이어야 하고, 만약 `0`이 주어진다면 `ValueError`를 내야 한다.
+
 ```
->>> [x for x in reversed(range(0, 5, 0))]
+>>> Range(0, 0, 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: range() arg 3 must not be zero
+  File ".../homework2_suminb.py", line 23, in ...
+    raise ValueError('`step` cannot be zero')
+ValueError: `step` cannot be zero
 ```
 
 다음의 파이썬 함수들이 도움이 될 수 있다.
