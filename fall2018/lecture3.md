@@ -30,6 +30,10 @@ pip install -r requirements.txt
 
 #### `install_requires` vs Requirements Files
 
+- `requirements.txt` 파일 대신 `setup.py`에 의존성을 명시할 수 있다.
+- Semantic versioning
+- 하지만 특정 버전으로 고정하는건 일반적으로 좋은 관습이 아니다.
+
 https://packaging.python.org/discussions/install-requires-vs-requirements/
 
 ### Setup Script
