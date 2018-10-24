@@ -15,7 +15,7 @@
 
 명령창에서 `docker ps` 혹은 `docker images` 명령어를 수행했을 때 오류 메시지가 나오지 않고 (예를 들면 파일 권한 문제 등) 빈 리스트가 나오는 상태로 만들면 된다.
 
-    (transporter) ➜  transporter git:(develop) ✗ docker images
+    ➜  transporter git:(develop) ✗ docker images
     REPOSITORY            TAG           IMAGE ID         CREATED          SIZE
 
 ### Redis Server
@@ -45,7 +45,7 @@
 PostgreSQL 서버에는 `psql` 명령어를 이용해서 접속할 수 있다. 다른 PostgreSQL 클라이언트를 사용해도 무방하다.
 
 ```
-➜  ~ psql -h localhost -U postgres
+➜  transporter git:(develop) ✗ psql -h localhost -U postgres
 Password for user postgres:
 psql (10.5, server 9.6.10)
 Type "help" for help.
@@ -58,7 +58,7 @@ postgres=#
 Redis 는 별도의 클라이언트를 준비하여 접속하거나 다음과 같이 Telnet 으로 접속할 수 있다. `localhost:6379`에 접속해서 `PING` 명령어를 날려보고 응답으로 `PONG` 메시지가 돌아오면 정상이다.
 
 ```
-(transporter) ➜  transporter git:(develop) ✗ telnet localhost 6379
+➜  transporter git:(develop) ✗ telnet localhost 6379
 Trying ::1...
 Connected to localhost.
 Escape character is '^]'.
