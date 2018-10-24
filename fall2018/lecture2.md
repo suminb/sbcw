@@ -211,6 +211,7 @@ class Cat(object):
 
 ### Class Objects
 
+(TODO: 내용 채워넣기)
 
 ### Methods
 
@@ -225,6 +226,18 @@ class Cat(object):
 
     def attack(self):
         raise NotImplemented
+```
+
+### 클래스의 비밀(?)
+
+```python
+tom = Cat('Tom')
+tom.greet()
+```
+
+```python
+tom = Cat('Tom')
+Cat.greet(tom)
 ```
 
 ### Special Method for String Representation
