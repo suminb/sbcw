@@ -24,9 +24,10 @@
 - 파이썬 프로젝트의 구성
 - REPL vs. Script File
 - `pip` 문법(?)
+- [Semantic versioning](https://semver.org/)
 - 패키지 설치해보기 (requests, flask)
-- 점심 뭐 먹을까? `random.choice()`
-- `requests.get()` 체험해보기
+- 점심 뭐 먹을까? `random.choice(['맥도날드', '치폴레', '베트남 쌀국수'])`
+- `requests.get()`, `json.loads()` 체험해보기
 
 ## 다음 시간에 이야기 할 것
 
