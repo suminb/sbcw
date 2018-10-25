@@ -1,4 +1,4 @@
-# SB Coding Workshop: Coupang 2018
+# Lecture 0
 
 참여자들에게 물어보았다. "파이썬을 배우는 이유가 무엇인가?"
 
