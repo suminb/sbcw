@@ -98,4 +98,29 @@ with app.app_context():
     db.create_all()
 ```
 
+마지막으로 `webapp`이 기존의 동작들을 잘 수행하는지 확인해본다.
+
+- 포스트 만들기
+- 포스트 읽어오기
+- 포스트 업데이트
+- 포스트 삭제
+
+### 유용한 도구들
+
+이 글에서는 PostgreSQL에 접속하기 위한 도구로 명령창 도구인 `psql`를 사용하지만, 명령창 사용이 익숙하지 않다면 GUI 도구를 이용해도 좋다.
+
+- https://dbeaver.io/
+- https://www.pgadmin.org/
+
+
+`GET` 요청을 제외한 다른 형식의 요청들은 웹브라우저를 이용해서 테스트하기 쉽지 않기 때문에 다음의 도구 중 하나를 골라 사용하는 것을 권장한다.
+
+- https://www.getpostman.com/
+- https://curl.haxx.se/
+
+웹브라우저 확장 기능도 있으니 참고하면 좋다. (직접 테스트 해보지는 못했다.)
+
+- https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo
+- https://addons.mozilla.org/en-US/firefox/addon/restclient/
+
 [transporter]: https://github.com/suminb/transporter
