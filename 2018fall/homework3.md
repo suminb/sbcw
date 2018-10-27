@@ -66,5 +66,36 @@ PING
 +PONG
 ```
 
+## Problem 2
+
+저번 시간에는 클래스에서 SQLite 에 데이터를 읽고 쓰는 것을 연습해보았는데, 이번에는 PostgreSQL 에 데이터를 읽고 쓰는 것을 연습해 보는 것이 목표이다. 사실, SQLAlchemy 같은 ORM 을 이용한다면 어떤 데이터베이스를 이용하든 코드 레벨에서 크게 달라질 것은 없다.
+
+저번 워크샵 시간에 다같이 만들었던 간단한 CRUD 웹 앱 코드를 정리해서 [`webapp.py`](https://github.com/suminb/sbcw/blob/master/2018fall/webapp.py) 를 만들어두었다. 이 코드를 그대로 사용하는 것을 추천하지만, 저번 시간에 만들었던 코드에서 그대로 이어 나가도 괜찮다.
+
+위 코드에서 의존하는 패키지는 다음과 같다.
+
+- `flask`
+- `flask-sqlalchemy`
+
+코드를 보면 다음과 같이 데이터베이스 연결을 위한 URI를 명시하는 설정 변수가 있다.
+
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+```
+
+이 부분을 변경해서 1번 문제에서 만든 PostgreSQL 서버에 접속할 수 있도록 만드는 것이 이 문제의 요구사항이다.
+
+SQLite 와 마찬가지로 PostgreSQL 데이터베이스에서도 최초에 한 번 테이블을 생성해주어야 한다. SQLite 에서는 하나의 파일이 하나의 데이터베이스에 대응되는 방식이었지만, PostgreSQL 에는 여러개의 데이터베이스, 여러명의 유저가 동시에 호스팅 될 수 있기 때문에 데이터베이스도 생성해주어야 한다.
+
+    psql -h localhost -U postgres -c "CREATE DATABASE webapp"
+
+`webapp` 이라는 이름을 가진 데이터베이스를 생성했지만, 다른 이름으로 해도 무방하다. 그런 다음, 파이썬 REPL 을 띄워서 다음의 코드를 실행시키면 필요한 테이블이 생성된다.
+
+```python
+from webapp import app, db
+
+with app.app_context():
+    db.create_all()
+```
 
 [transporter]: https://github.com/suminb/transporter
