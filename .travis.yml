@@ -5,7 +5,7 @@ python:
   - "3.7-dev"
 
 install:
-  - pip install -r fall2018/requirements.txt
+  - pip install -r 2018fall/requirements.txt
 
 script:
   - export PYTHONPATH=$PYTHONPATH:.
