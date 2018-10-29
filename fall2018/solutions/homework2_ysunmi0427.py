@@ -83,7 +83,3 @@ class Range(object):
         # return reversed(list(Range(self.start, self.stop, self.step)))
         length = math.ceil((self.stop - self.start) / self.step)
         return Range(self.start + self.step * (length-1), self.start-1, -self.step)
-        
-        
-
-
