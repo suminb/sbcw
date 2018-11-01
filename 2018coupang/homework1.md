@@ -169,6 +169,63 @@ True
 False
 ```
 
+## Problem 8 (Bonus)
+
+참고: 길이가 정해지지 않은 인자를 받으려면 다음과 같이 코드를 작성할 수 있다.
+
+```python
+def func(*args):
+    for x in args:
+        # Do something with x
+        pass
+```
+
+함수의 시그니처(signature)가 위와 같다면 다음과 같이 호출하는 것이 가능하다.
+
+```
+func(x)
+func(x, y)
+func(x, y, z)
+...
+```
+
+### Problem 8.1
+
+```python
+def zip(*args):
+    # Put your code here
+    pass
+```
+
+파이썬에서 제공하는 `zip()` 함수를 구현하여라.
+
+```
+>>> list(zip([1, 2, 3], 'abc'))
+[(1, 'a'), (2, 'b'), (3, 'c')]
+```
+
+전달되는 리스트의 길이는 동일하지 않을 수도 있으며, 그런 경우 가장 짧은 리스트를 기준으로 결과를 반환한다.
+
+```
+>>> list(zip([1, 2, 3, 4], 'abc', [9.0, 8.0]))
+[(1, 'a', 9.0), (2, 'b', 8.0)]
+```
+
+### Problem 8.2
+
+```python
+def unzip(iterables):
+    # Put your code here
+    pass
+```
+
+8.1에서 구현한 `zip()`의 결과를 다시 원래대로 되돌려놓는 함수를 작성하여라.
+
+```
+>>> list(unzip([(1, 'a'), (2, 'b'), (3, 'c')]))
+[(1, 2, 3), ('a', 'b', 'c')]
+```
+
 ## 제출
 
 코드를 제출하는 방법에 대해서는 아직 고민중이다. `#python_seminar` 채널을 통해서 공지할 예정이다.
