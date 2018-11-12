@@ -7,7 +7,7 @@
 ```python
 class Vector:
 
-    def __init__(self):
+    def __init__(self, *elements):
         # Put your code here
         pass
 
