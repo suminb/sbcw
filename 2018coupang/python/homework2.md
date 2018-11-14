@@ -8,8 +8,10 @@
 class Vector:
 
     def __init__(self, *elements):
-        # Put your code here
-        pass
+        self.elements = elements
+
+    def __eq__(self, other):
+        return all([x == y for x, y in zip(self.elements, other.elements)])
 
     # ...
 ```
