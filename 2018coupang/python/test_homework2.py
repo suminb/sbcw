@@ -1,29 +1,6 @@
-import random
-
 import pytest
 
-
-random.seed(0)
-
-
-@pytest.fixture
-def random_list():
-    def make(min_size=2, max_size=10):
-        return [random.randint(-100, 100)
-                for _ in range(random.randint(min_size, max_size))]
-    return make
-
-
-def setup_module(module):
-    username = pytest.config.getoption('username')
-    solution_module = f'homework2_{username}'
-
-    try:
-        solution = __import__(solution_module)
-    except ImportError:
-        pytest.fail(f'{solution_module}.py does not exist')
-    else:
-        globals()['Vector'] = solution.Vector
+from homework2 import Vector
 
 
 @pytest.mark.parametrize('n', range(2, 100, 17))

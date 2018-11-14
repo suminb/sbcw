@@ -4,6 +4,8 @@
 
 벡터(`Vector`) 객체를 구현하는 것이 이 문제의 목표이다. 스켈레톤(skeleton) 구현은 다음과 같으며, 구현에 어려움이 있다면 이 섹션 맨 아래쪽에 있는 힌트를 참고해도 좋다. 힌트를 보기 전에 최대한 혼자 힘으로 해결해보는 것을 추천한다.
 
+파일 이름은 `homework2.py` 로 한다.
+
 ```python
 class Vector:
 
@@ -178,6 +180,10 @@ TypeError: unsupported operand type(s) for //: 'Vector' and 'Vector'
 - Problem 1.7: [`__mul__()`](https://docs.python.org/3/reference/datamodel.html#object.__mul__)
 - Problem 1.8: [`__truediv__()`](https://docs.python.org/3/reference/datamodel.html#object.__truediv__), [`__floordiv__()`](https://docs.python.org/3/reference/datamodel.html#object.__floordiv__), [`NotImplemented`](https://docs.python.org/3/library/constants.html#NotImplemented)
 
-## Problem 2, 3
+## 제출
 
-TODO: 문제 한두개만 더 내기
+답안을 따로 제출하지는 않고 각자 채점하기로 한다. 채점은 다음과 같이 할 수 있다.
+
+    pytest -v test_homework2.py
+
+`Vector` 클래스를 구현한 파일 이름은 `homework2.py` 로 한다.
