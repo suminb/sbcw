@@ -178,7 +178,7 @@ TypeError: unsupported operand type(s) for //: 'Vector' and 'Vector'
 - Problem 1.5: [`__add__()`](https://docs.python.org/3/reference/datamodel.html#object.__add__)
 - Problem 1.6: [`__sub__()`](https://docs.python.org/3/reference/datamodel.html#object.__sub__)
 - Problem 1.7: [`__mul__()`](https://docs.python.org/3/reference/datamodel.html#object.__mul__)
-- Problem 1.8: [`__truediv__()`](https://docs.python.org/3/reference/datamodel.html#object.__truediv__), [`__floordiv__()`](https://docs.python.org/3/reference/datamodel.html#object.__floordiv__), [`NotImplemented`](https://docs.python.org/3/library/constants.html#NotImplemented)
+- Problem 1.8: [`__truediv__()`](https://docs.python.org/3/reference/datamodel.html#object.__truediv__), [`__floordiv__()`](https://docs.python.org/3/reference/datamodel.html#object.__floordiv__), [`NotImplemented`](https://docs.python.org/3/library/constants.html#NotImplemented), [`isinstance`](https://docs.python.org/3.7/library/functions.html#isinstance)
 
 ## 제출
 
