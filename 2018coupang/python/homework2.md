@@ -180,6 +180,61 @@ TypeError: unsupported operand type(s) for //: 'Vector' and 'Vector'
 - Problem 1.7: [`__mul__()`](https://docs.python.org/3/reference/datamodel.html#object.__mul__)
 - Problem 1.8: [`__truediv__()`](https://docs.python.org/3/reference/datamodel.html#object.__truediv__), [`__floordiv__()`](https://docs.python.org/3/reference/datamodel.html#object.__floordiv__), [`NotImplemented`](https://docs.python.org/3/library/constants.html#NotImplemented), [`isinstance`](https://docs.python.org/3.7/library/functions.html#isinstance)
 
+## Problem 2.1
+
+파이썬의 `range()` 함수는 다음과 같이 유용하게 사용할 수 있다.
+
+```
+>>> [x for x in range(0, 10, 2)]
+[0, 2, 4, 6, 8]
+```
+
+이것과 비슷한 기능을 제공하는 `Range` 클래스를 작성하여라. 단, `range()` 를 사용하지 않고 구현해야 한다. 또한, 복잡도를 줄이기 위해 `range(10)` 처럼 하나의 인자만 전달하는 것은 지원하지 않는다.
+
+다음과 같이 시작과 끝을 명시하거나,
+
+```
+>>> [x for x in Range(0, 5)]
+[0, 1, 2, 3, 4]
+```
+
+다음과 같이 시작과 끝, 그리고 스텝 크기를 명시할 수 있어야 한다.
+
+```
+>>> [x for x in Range(0, 10, 3)]
+[0, 3, 6, 9]
+```
+
+세번째 인자인 `step`의 값은 `0`이 아닌 값이어야 하고, 만약 `0`이 주어진다면 `ValueError`를 내야 한다.
+
+```
+>>> Range(0, 0, 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File ".../homework2_suminb.py", line 23, in ...
+    raise ValueError('`step` cannot be zero')
+ValueError: `step` cannot be zero
+```
+
+다음의 파이썬 함수들이 도움이 될 수 있다.
+
+- [`__iter__()`](https://docs.python.org/3/reference/datamodel.html#object.__iter__)
+- [`__next__()`](https://docs.python.org/3/library/stdtypes.html#iterator.__next__)
+
+## Problem 2.2
+
+다음의 동작을 지원하도록 `Range` 클래스를 확장하여라.
+
+```
+>>> [x for x in reversed(Range(0, 5))]
+[4, 3, 2, 1, 0]
+```
+
+```
+>>> [x for x in reversed(Range(0, 10, 2))]
+[8, 6, 4, 2, 0]
+```
+
 ## 제출
 
 답안을 따로 제출하지는 않고 각자 채점하기로 한다. 채점은 다음과 같이 할 수 있다.

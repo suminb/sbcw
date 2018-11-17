@@ -1,6 +1,6 @@
 import pytest
 
-from homework2 import Vector
+from homework2 import Range, Vector
 
 
 @pytest.mark.parametrize('n', range(2, 100, 17))
@@ -140,3 +140,41 @@ def test_problem1_8_invalid():
         w = u / v
     with pytest.raises(TypeError):
         w = u // v
+
+
+@pytest.mark.parametrize('start, end', [
+    (0, 0),
+    (1, 2),
+    (-10, 5),
+    (-20, 0),
+    (-30, -10),
+])
+def test_range_1(start, end):
+    assert list(Range(start, end)) == list(range(start, end))
+
+
+@pytest.mark.parametrize('start, end, step', [
+    (0, 0, 1),
+    (1, 2, 1),
+    (3, 20, 1),
+    (-10, 10, 3),
+    (-10, 20, 100),
+])
+def test_range_2(start, end, step):
+    assert list(Range(start, end, step)) == list(range(start, end, step))
+
+
+@pytest.mark.parametrize('start, end, step', [
+    (0, 0, 1),
+    (1, 2, 1),
+    (3, 20, 1),
+    (-10, 10, 3),
+    (-10, 20, 100),
+])
+def test_range_3(start, end, step):
+    assert list(reversed(Range(start, end, step))) == list(reversed(range(start, end, step)))
+
+
+def test_ragne_4():
+    with pytest.raises(ValueError):
+        _ = Range(0, 0, 0)
