@@ -241,4 +241,4 @@ ValueError: `step` cannot be zero
 
     pytest -v test_homework2.py
 
-`Vector` 클래스를 구현한 파일 이름은 `homework2.py` 로 한다.
+`Vector`, `Range` 클래스를 구현한 파일 이름은 `homework2.py` 로 한다.
